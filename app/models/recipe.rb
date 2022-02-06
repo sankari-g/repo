@@ -15,12 +15,12 @@ class Recipe < ApplicationRecord
   }
 
   def self.search_functionality(keywords)
-    keywords = keywords.split
+    keywords = keywords.nil? ? [] : keywords.split
     ingredients = Ingredient.arel_table
     Recipe
       .where(keywords.map do |keyword|
                arel_table[:name].matches("%#{keyword}%").or(ingredients[:ingredient_name].matches("%#{keyword}%"))
-							end.reduce(&:or))
+             end.reduce(&:or))
       .preload(:recipe_time_detail)
       .joins(:ingredients)
       .distinct

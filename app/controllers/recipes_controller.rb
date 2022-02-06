@@ -7,9 +7,9 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe
-								.search_functionality(params[:search_value])
-								.page(params[:page])
-								.per(params[:per_page]) if params[:search_value]
+               .search_functionality(params[:search_value])
+               .page(params[:page])
+               .per(params[:per_page])
   end
 
   def show; end

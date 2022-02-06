@@ -1,9 +1,7 @@
 <div class = "heading-style">  <%= @recipe.name %> </div>
 
 <div class = "subtitle"> 
-  <span class = "pull-left"> 
-	  Rating: <%= @recipe_information.rate.present? ? @recipe_information.rate.to_s+' / 5' : 'NA' %>
-	</span>
+	Rating: <%= @recipe_information.rate.present? ? @recipe_information.rate.to_s+' / 5' : 'NA' %>
 	<span class = "pull-right"> Total time: <%= @recipe_time_detail.total_time %></span>
 </div>
 
@@ -23,9 +21,6 @@
 	</tr>
 
 	</table>
-
- 
-
   
 <div>
 	<h2> Ingredients: </h2>
@@ -42,3 +37,4 @@
 <div class = "other-info">
 	<p> Tips from Author: <%= @recipe_information.author_tips %> </p>
 </div>
+<a href = 'javascript:history.back()'> back </a>

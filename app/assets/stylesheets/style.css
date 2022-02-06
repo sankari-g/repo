@@ -113,6 +113,10 @@ a {
 	float: right;
 }
 
+.pull-left {
+	float: left;
+}
+
 .heading-style {
 	font-size: 30px;
 	text-align: center;
@@ -161,6 +165,10 @@ a {
   color: grey;
 }
 
+.pagination span.current {
+  color: rgb(0, 0, 0);
+}
+
 .pagination-font {
 	font-family: monospace;
 	color: grey;
@@ -168,4 +176,8 @@ a {
 }
 .d-flex {
   display: flex!important;
+}
+
+.header a {
+	color: #15a0a5;
 }
