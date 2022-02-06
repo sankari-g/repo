@@ -1,0 +1,15 @@
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: Abc123!
+  host: localhost
+  timeout: 5000
+
+development:
+  <<: *default
+  database: cook_book_development
+
+test:
+  <<: *default
+  database: cook_book_test

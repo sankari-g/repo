@@ -1,0 +1,171 @@
+
+body {
+  font-family: 'Renner, helvetica, sans-serif';
+}
+
+.application_layout_style {
+  padding: 20px 16px;
+}
+.white, .White, .WHITE {
+  background-color: #fff;
+}
+
+.black {
+  background-color: #000;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.mb-3 {
+	margin-bottom: 1rem!important;
+}
+.navbar {
+	border-bottom: 4px solid #66cfad;
+	font-size: 1rem;
+	padding: 20px 1rem;
+}
+
+.text-uppercase {
+	text-transform: uppercase!important;
+}
+
+.center-align {
+	text-align: center;
+}
+.container-lg {
+	max-width: 1000px;
+	padding-right: 50px;
+	padding-left: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.table {
+	width: 100%;
+	color: #131313;
+	border-collapse: collapse;
+	margin-bottom: 10px;
+}
+
+.table-bordered {
+  border: 1px solid #131313;
+}
+
+.header {
+  text-align: center;
+  padding-top: 12px;
+  border: none;
+  min-height: 10px;
+	text-transform: uppercase !important;
+	background-color: #a8c7d1 !important;
+	font-family: SourceSerif, helvetica, sans-serif;
+}
+
+table th {
+	background-color: #a8c7d1;
+	text-align: left;
+	padding: 20px 10px!important;
+}
+
+table td {
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 1.2px;
+	text-align: left;
+	padding: 20px 10px!important;
+	min-width: 100px;
+	border-top: none!important;
+	border-bottom: 1px solid #131313;
+	font-weight: 400;
+}
+
+.margin-20 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.search-box {
+	width: 50%;
+	padding: 12px 10px;
+	border: 1px solid #c5cad1;
+}
+
+a {
+	color: #b32b2b;
+	text-decoration: none;
+}
+
+.pull-right {
+	float: right;
+}
+
+.heading-style {
+	font-size: 30px;
+	text-align: center;
+	font-family: SourceSerif, helvetica, sans-serif;
+}
+
+.subtitle {
+	border-bottom: 1px solid;
+	padding-bottom: 7px;
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+.other-info {
+	font-style: italic;
+}
+
+.serving-qty-class {
+	background-color: #c5cad1;
+	display: inline-block;
+	padding: 0.25rem 0.5rem;	
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.subtitle-list li {
+  padding: 10px;
+}
+
+.recipe-show-table td{
+	border: 0px;
+}
+
+.padding-20 {
+	padding: 22px;
+}
+
+.pagination {
+  text-align: right;
+	font-size: 20px;
+}
+
+.pagination a {
+  color: grey;
+}
+
+.pagination-font {
+	font-family: monospace;
+	color: grey;
+	justify-content: space-between!important;
+}
+.d-flex {
+  display: flex!important;
+}

@@ -1,0 +1,15 @@
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bindex-0.8.1/ext/skiptrace
+/Users/sankareswarisubburaj/.rvm/rubies/ruby-2.6.6/bin/ruby -I /Users/sankareswarisubburaj/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20220202-26995-lg7apr.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20220202-26995-1kxeezx/skiptrace/internal

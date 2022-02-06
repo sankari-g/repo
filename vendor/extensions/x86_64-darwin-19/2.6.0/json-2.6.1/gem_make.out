@@ -1,0 +1,13 @@
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/json-2.6.1/ext/json
+/Users/sankareswarisubburaj/.rvm/rubies/ruby-2.6.6/bin/ruby -I /Users/sankareswarisubburaj/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20220202-29137-rg2db1.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/json-2.6.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/json-2.6.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/json-2.6.1/ext/json
+make "DESTDIR=" install

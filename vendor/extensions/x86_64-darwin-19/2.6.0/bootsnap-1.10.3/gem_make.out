@@ -1,0 +1,15 @@
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bootsnap-1.10.3/ext/bootsnap
+/Users/sankareswarisubburaj/.rvm/rubies/ruby-2.6.6/bin/ruby -I /Users/sankareswarisubburaj/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20220202-26995-kzwa19.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bootsnap-1.10.3/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bootsnap-1.10.3/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/gems/bootsnap-1.10.3/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20220202-26995-74jiiu/bootsnap

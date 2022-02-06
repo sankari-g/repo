@@ -1,0 +1,38 @@
+<div class = "container-lg">
+	<center>
+		<div class= "text-uppercase center-align" > search for receipe  </div>
+		<div class = "margin-20" >
+			<%= form_tag recipes_path, method: :get do |f| %>
+				<%= text_field_tag :search_value, params[:search_value],class: "search-box", placeholder: 'Comma separated Ingredient or Recipe name' %>
+			<% end %>	
+		</div>
+
+		<% if @recipes %>
+			<table class = "table table-bordered"> 
+				<thead>
+					<th> Name </th>
+					<th> Difficulty </th>
+					<th> Time to complete Recipe </th>
+					<th> Author </th>
+				</thead>
+				<tbody>
+					<% if @recipes.empty? %>	
+						<tr> <td> No recipe found </td> </tr>
+					<% else %>
+						<% @recipes.each do |recipe|%>
+							<tr>
+								<td> <%= link_to recipe.name, recipe_path(recipe.id), target: '_blank' %> </td>
+								<td> <%= recipe.difficulty %> </td>
+								<td> <%= recipe.recipe_time_detail.total_time %> </td>
+								<td> <%= recipe.author %> </td>
+							</tr>
+						<% end %>
+					<% end %>
+			</tbody>
+		</table>
+	
+		<div class = "d-flex pagination-font" > <div> <%= page_entries_info @recipes, entry_name: '' %> </div> <%= paginate @recipes %> </div>
+		<% end %>
+	</center>
+		
+</div>

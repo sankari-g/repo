@@ -1,0 +1,26 @@
+require: 
+  rubocop-rails
+  
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'bin/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'config/**/*.rb'
+    - 'tmp/**/*.rb'
+    - 'test/*'
+    - 'app/helpers/application_helper.rb'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false

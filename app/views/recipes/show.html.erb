@@ -1,0 +1,44 @@
+<div class = "heading-style">  <%= @recipe.name %> </div>
+
+<div class = "subtitle"> 
+  <span class = "pull-left"> 
+	  Rating: <%= @recipe_information.rate.present? ? @recipe_information.rate.to_s+' / 5' : 'NA' %>
+	</span>
+	<span class = "pull-right"> Total time: <%= @recipe_time_detail.total_time %></span>
+</div>
+
+	<table class = "recipe-show-table">
+	 <tr> 
+	   <td>
+			<ul class = "subtitle-list padding-20"> 
+				<li> <span class = "bold" >Complexity: </span><%= @recipe.difficulty %> </li> 
+				<li> <span class = "bold" >Budget: </span><%= @recipe_information.budget %> </li> 
+				<li> <span class = "bold" >Preparation Time: </span><%= @recipe_time_detail.prep_time %> </li> 
+				<li> <span class = "bold" >Cooking Time: </span><%= @recipe_time_detail.cooking_time %> </li> 
+			</ul>
+		</td> 
+		<td> 
+			<img src ='<%= @recipe.image %>'> 
+		</td> 
+	</tr>
+
+	</table>
+
+ 
+
+  
+<div>
+	<h2> Ingredients: </h2>
+	
+	<span class = "serving-qty-class" > 
+	  Serves <%= @recipe_information.people_quantity %> people 
+	</span>
+
+	<% @ingredients.pluck(:ingredient_name).each do |ingredient| %>
+	<ul> <%= ingredient %> </ul>
+	<% end %>
+</div>
+	
+<div class = "other-info">
+	<p> Tips from Author: <%= @recipe_information.author_tips %> </p>
+</div>

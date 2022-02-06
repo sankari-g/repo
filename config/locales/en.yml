@@ -1,0 +1,5 @@
+en:
+  helpers:
+    page_entries_info:
+      more_pages: 
+        display_entries: "Displaying %{first} - %{last} of %{total}"
