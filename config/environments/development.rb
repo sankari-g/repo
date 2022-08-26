@@ -59,7 +59,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-	config.hosts << "cook-book-application.herokuapp.com"
+	config.hosts << "my-cook-book-app.herokuapp.com"
 
 	# config.after_initialize do
   #   Bullet.enable = true
