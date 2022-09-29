@@ -1,13 +1,15 @@
 default: &default
   adapter: mysql2
   pool: 20
-  username: root
-  # password: abc12345
-  # host: cook-book-development.cusvaztgta1i.ap-south-1.rds.amazonaws.com
+  host: eu-cdbr-west-03.cleardb.net
+  encoding: utf8mb4
+  collation: utf8mb4_bin
+  username: b40a210f95e0f2
+  password: da6705a0
 
 development:
   <<: *default
-  database: cook_book_development
+  database: heroku_55171703a92b79d
 
 test:
   <<: *default
