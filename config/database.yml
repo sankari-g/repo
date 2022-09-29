@@ -1,9 +1,9 @@
 default: &default
   adapter: mysql2
   pool: 20
-  username: admin
-  password: abc12345
-  host: cook-book-development.cusvaztgta1i.ap-south-1.rds.amazonaws.com
+  username: root
+  # password: abc12345
+  # host: cook-book-development.cusvaztgta1i.ap-south-1.rds.amazonaws.com
 
 development:
   <<: *default
