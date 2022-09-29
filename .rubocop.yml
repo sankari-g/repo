@@ -1,6 +1,6 @@
-require: 
+require:
   rubocop-rails
-  
+
 AllCops:
   Exclude:
     - 'db/schema.rb'
@@ -12,6 +12,7 @@ AllCops:
     - 'tmp/**/*.rb'
     - 'test/*'
     - 'app/helpers/application_helper.rb'
+    - 'spec/rails_helper.rb'
 
 Metrics/AbcSize:
   Enabled: false

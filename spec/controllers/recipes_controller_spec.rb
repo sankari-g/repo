@@ -3,14 +3,14 @@
 require 'rails_helper'
 
 describe RecipesController, type: :controller do
-  let!(:recipe_1) { create(:recipe, name: 'stuffed tomatoes') }
-  let!(:recipe_2) { create(:recipe, name: 'Veggie Burger') }
-  let!(:recipe_information_1) { create(:recipe_information, recipe: recipe_1) }
-  let!(:recipe_information_2) { create(:recipe_information, recipe: recipe_2) }
-  let!(:recipe_ingredient_1) { create(:recipe_ingredient, recipe: recipe_1) }
-  let!(:recipe_ingredient_2) { create(:recipe_ingredient, ingredient: ingredient, recipe: recipe_2) }
-  let!(:recipe_time_detail_1) { create(:recipe_time_detail, recipe: recipe_1) }
-  let!(:recipe_time_detail_2) { create(:recipe_time_detail, recipe: recipe_2) }
+  let!(:recipe1) { create(:recipe, name: 'stuffed tomatoes') }
+  let!(:recipe2) { create(:recipe, name: 'Veggie Burger') }
+  let!(:recipe_information1) { create(:recipe_information, recipe: recipe1) }
+  let!(:recipe_information2) { create(:recipe_information, recipe: recipe2) }
+  let!(:recipe_ingredient1) { create(:recipe_ingredient, recipe: recipe1) }
+  let!(:recipe_ingredient2) { create(:recipe_ingredient, ingredient: ingredient, recipe: recipe2) }
+  let!(:recipe_time_detail1) { create(:recipe_time_detail, recipe: recipe1) }
+  let!(:recipe_time_detail2) { create(:recipe_time_detail, recipe: recipe2) }
   let!(:ingredient) { create(:ingredient, ingredient_name: 'tomato') }
 
   describe 'GET#show' do
@@ -22,7 +22,7 @@ describe RecipesController, type: :controller do
       let(:keywords) { 'veggie' }
 
       it 'should return recipes contain search text in its name' do
-        expect(assigns[:recipes]).to eq [recipe_2]
+        expect(assigns[:recipes]).to eq [recipe2]
       end
     end
 
@@ -30,7 +30,7 @@ describe RecipesController, type: :controller do
       let(:keywords) { 'tomato' }
 
       it 'should return recipes with matching name and ingredient name' do
-        expect(assigns[:recipes]).to eq [recipe_1, recipe_2]
+        expect(assigns[:recipes]).to eq [recipe1, recipe2]
       end
     end
 
@@ -47,11 +47,11 @@ describe RecipesController, type: :controller do
     subject { get :show, params: { id: recipe_id } }
 
     context 'with valid recipe id' do
-      let(:recipe_id) { recipe_2.id }
+      let(:recipe_id) { recipe2.id }
 
       it 'returns recipe and its associated records' do
         subject
-        expect(assigns[:recipe]).to eq(recipe_2)
+        expect(assigns[:recipe]).to eq(recipe2)
         expect(assigns[:recipe_information]).to eq recipe_information_2
         expect(assigns[:ingredients]).to eq([ingredient])
       end

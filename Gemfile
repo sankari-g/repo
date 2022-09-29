@@ -10,6 +10,8 @@ gem 'mysql2'
 gem 'rails', '~> 6.0.0'
 
 gem 'bootsnap'
+gem 'brakeman'
+gem 'bundler-audit'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder'
 gem 'json'
@@ -24,6 +26,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-byebug'
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
