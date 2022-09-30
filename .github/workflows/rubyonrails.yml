@@ -13,13 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:11-alpine
+        image: mysql:8.0
         ports:
-          - "5432:5432"
+          - "3306:3306"
         env:
-          POSTGRES_DB: rails_test
-          POSTGRES_USER: rails
-          POSTGRES_PASSWORD: password
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_DB: github_actions_test
+          MYSQL_USER: root
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_PASSWORD:
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"

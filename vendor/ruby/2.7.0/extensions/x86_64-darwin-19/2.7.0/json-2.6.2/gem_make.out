@@ -1,0 +1,13 @@
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/ruby/2.7.0/gems/json-2.6.2/ext/json
+/Users/sankareswarisubburaj/.rvm/rubies/ruby-2.7.6/bin/ruby -I /Users/sankareswarisubburaj/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20220930-49638-j3gyg7.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/ruby/2.7.0/gems/json-2.6.2/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/ruby/2.7.0/gems/json-2.6.2/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/sankareswarisubburaj/sankari_personal/cook_book/vendor/ruby/2.7.0/gems/json-2.6.2/ext/json
+make "DESTDIR=" install
