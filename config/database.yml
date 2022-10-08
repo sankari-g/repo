@@ -1,16 +1,16 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   pool: 20
-  host: eu-cdbr-west-03.cleardb.net
-  encoding: utf8mb4
-  collation: utf8mb4_bin
-  username: b40a210f95e0f2
-  password: da6705a0
+  host: jelani.db.elephantsql.com
 
 development:
   <<: *default
-  database: heroku_55171703a92b79d
+  username: itosakkx
+  password: KrbM7rPX0NimKOLLCcf5SsqdxmGu4lHB
+  database: itosakkx
 
 test:
   <<: *default
-  database: cook_book_test
+  username: xuyuflpz
+  password: ghkVdFMDRGb1oi-2Dm4kIdKwVwq_L_-G
+  database: xuyuflpz

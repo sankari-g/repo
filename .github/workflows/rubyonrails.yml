@@ -13,15 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: mysql:8.0
+        image: postgres:11-alpine
         ports:
-          - "3306:3306"
+          - "5432:5432"
         env:
-          MYSQL_HOST: 127.0.0.1
-          MYSQL_DB: github_actions_test
-          MYSQL_USER: root
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_PASSWORD:
+          POSTGRES_DB: rails_test
+          POSTGRES_USER: rails
+          POSTGRES_PASSWORD: password
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
@@ -49,10 +47,9 @@ jobs:
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
           bundler-cache: true
-      # Add or replace any other lints here
-      - name: Security audit dependencies
-        run: bundle exec bundle audit --update
-      - name: Security audit application code
-        run: bundle exec brakeman -q -w2
-      - name: Lint Ruby files
-        run: bundle exec rubocop --parallel
+  bundle audit:
+      run: bundle exec bundle audit --update
+  brakeman:
+    run: bundle exec brakeman -q -w2
+  rubocop:
+    run: bundle exec rubocop --parallel

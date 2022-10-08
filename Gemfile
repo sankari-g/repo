@@ -6,8 +6,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.6'
 
 gem 'activerecord-import'
-gem 'mysql2'
+gem 'pg', '~> 1.4', '>= 1.4.3'
 gem 'rails', '~> 6.1.0'
+gem 'parallel'
 
 gem 'bootsnap'
 gem 'brakeman'
