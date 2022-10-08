@@ -8,6 +8,16 @@ name: "Ruby on Rails CI"
 on:
   push:
     branches: [ "main" ]
+.test-steps:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Install Ruby and gems
+      uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+      with:
+        bundler-cache: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -48,8 +58,11 @@ jobs:
         with:
           bundler-cache: true
   bundle audit:
-      run: bundle exec bundle audit --update
+    extends: .test-steps
+    run: bundle exec bundle audit --update
   brakeman:
+    extends: .test-steps
     run: bundle exec brakeman -q -w2
   rubocop:
+    extends: .test-steps
     run: bundle exec rubocop --parallel
