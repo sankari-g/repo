@@ -52,7 +52,7 @@ describe RecipesController, type: :controller do
       it 'returns recipe and its associated records' do
         subject
         expect(assigns[:recipe]).to eq(recipe2)
-        expect(assigns[:recipe_information]).to eq recipe_information_2
+        expect(assigns[:recipe_information]).to eq recipe_information2
         expect(assigns[:ingredients]).to eq([ingredient])
       end
     end

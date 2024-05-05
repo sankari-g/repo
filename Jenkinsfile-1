@@ -1,0 +1,29 @@
+pipeline {
+  agent { label 'agent1' }
+
+  stages {
+    stage ('Rubocop') {
+      steps {
+        sh 'ruby --version'
+        sh 'gem install bundler'
+        sh 'bundle install'
+        sh 'bundle exec rubocop'
+      }
+    }
+    stage ('Unit Testing') {
+      steps {
+        sh 'bundle exec rspec'
+      }
+    }
+    stage ('for jenkins branch') {
+      when {
+        branch 'main'
+      }
+      
+      steps {
+        input (message: 'Rerun unit test?', ok: 'Execute')
+        sh 'bundle exec rspec'
+      }
+    }
+  }
+}
