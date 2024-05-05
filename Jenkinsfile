@@ -16,7 +16,6 @@ pipeline {
       when {
         branch 'main'
       }
-      
       steps {
         input (message: 'Sample environment', ok: 'Execute')
         echo 'Executed'
