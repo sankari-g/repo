@@ -21,5 +21,8 @@ pipeline {
         echo 'Executed'
       }
     }
-  }
-}
+    stage ('print message'){
+      steps {
+        echo 'Hello from Jenkins'  
+      }
+    }
