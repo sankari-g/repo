@@ -26,3 +26,4 @@ class Recipe < ApplicationRecord
       .distinct
   end
 end
+
