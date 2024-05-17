@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage ('Main build') {
       steps {
-        echo 'Hello from Main Build'
+        echo 'Hello from Main Build '
       }
     }
     stage ('Readme') {
