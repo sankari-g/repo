@@ -1,30 +1,24 @@
 pipeline {
-  agent { label 'agent1' }
-
-  stages {
-    stage ('Main build') {
-      steps {
-        echo 'Hello from Main Build '
-      }
-    }    
-    stage ('Readme') {
-      steps {
-        sh 'cat README.md'
-      }
+    environment {
+        BUNDLE_PATH = '/var/cache/bundler'
     }
-    stage ('for jenkins branch') {
-      when {
-        branch 'main'
-      }
-      steps {
-        input (message: 'Sample environment', ok: 'Execute')
-        echo 'Executed'
-      }
+    agent { docker { 
+        image 'ruby:2.7.6' 
+        args '-v /var/run/docker.sock:/var/run/docker.sock \
+              -v /var/cache/bundler/2.7:/var/cache/bundler/\
+              -v /var/secrets:/var/secrets \
+              -v /home/jenkins-github-sankari/.ssh/:/root/.ssh/ \
+              -v /home/jenkins-github-sankari/.docker:/root/.docker/'
+                   }
+          }
+    stages {
+        stage('build') {
+            steps {
+                sh 'ruby --version'
+                sh 'gem install bundler -v 2.3.25'
+                sh 'bundle install'
+                sh 'bundle exec rspec'
+            }
+        }
     }
-    stage ('print message'){
-      steps {
-        echo 'Hello from Jenkins'  
-      }
-    }
-  }
 }
